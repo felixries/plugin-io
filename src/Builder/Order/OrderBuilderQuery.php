@@ -219,11 +219,13 @@ class OrderBuilderQuery
     }
 
     /**
-     * @param int $orderDateType
-     * @param     $date
+     * Add order dates to the order
+     *
+     * @param int       $orderDateType
+     * @param string    $date For example date('Y-m-d\TH:i:sP')
      * @return OrderBuilderQuery
      */
-    public function withOrderDate(int $orderDateType, $date)
+    public function withOrderDate(int $orderDateType, string $date)
     {
         if($this->order["dates"] === null)
         {
