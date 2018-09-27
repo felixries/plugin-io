@@ -212,7 +212,7 @@ class IORouteServiceProvider extends RouteServiceProvider
         if( in_array("newsletter-opt-out", $enabledRoutes) || in_array("all", $enabledRoutes) )
         {
             $router->get('newsletter/unsubscribe', 'IO\Controllers\NewsletterOptOutController@showOptOut');
-            $router->post('newsletter/unsubscribe', 'IO\Controllers\NewsletterOptOutConfirmationController@showOptOutConfirmation');
+            $router->get('newsletter/unsubscribe-confirmation', 'IO\Controllers\NewsletterOptOutConfirmationController@showOptOutConfirmation');
         }
         
         /*
